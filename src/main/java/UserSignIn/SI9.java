@@ -10,18 +10,14 @@ public class SI9 {
         FirefoxDriver fdriver = new FirefoxDriver();
 
         try {
-            // URL of the login page
             String url = "http://lsetbank.lset.uk/";
 
-            // Open the login page
             fdriver.get(url);
             fdriver.manage().window().maximize();
 
-            // Click the login button
             WebElement loginButton = fdriver.findElement(By.xpath("/html/body/div/nav/div/div/button[1]"));
             loginButton.click();
 
-            // Wait until username and password fields are visible
             Thread.sleep(2000);
 
             WebElement username = fdriver.findElement(By.id("username"));
@@ -56,7 +52,6 @@ public class SI9 {
                 System.out.println("Test Successful: Copy-paste is disabled in the password field.");
             }
         } finally {
-            // Close the browser
             fdriver.quit();
         }
     }
