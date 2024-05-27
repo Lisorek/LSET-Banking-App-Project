@@ -36,8 +36,13 @@ public class C4 {
         oldPassword.sendKeys("Tomato123");
         passwordButton.click();
         Thread.sleep(2000);
-        WebElement errorPopUp = fdriver.findElement(By.xpath("/html/body/div/main/div/div/div"));
+        WebElement errorPopUp = fdriver.findElement(By.className("invalid-feedback"));
         System.out.println(errorPopUp.getText());
+        if (errorPopUp.getText().equals("Required")) {
+            System.out.println("Test successful");
+        } else {
+            System.out.println("Test failed");
+        }
         fdriver.close();
     }
 }

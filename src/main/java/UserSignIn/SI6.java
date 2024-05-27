@@ -38,12 +38,12 @@ public class SI6 {
         Thread.sleep(2000);
         String title = fdriver.getCurrentUrl();
         System.out.println("User got to URL:  " + title + " So the test was:");
-        fdriver.close();
         if (title.equals("http://lsetbank.lset.uk/")) {
             System.out.println("Test Successful");
         } else {
             System.out.println("Test failed");
         }
+        fdriver.quit();
     }
 }
 

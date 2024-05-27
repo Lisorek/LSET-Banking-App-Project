@@ -38,6 +38,6 @@ public class C2 {
         Thread.sleep(3000);
         WebElement errorPopUp = fdriver.findElement(By.xpath("/html/body/div/main/div/div/div"));
         System.out.println(errorPopUp.getText());
-        fdriver.close();
+        fdriver.quit();
     }
 }

@@ -52,6 +52,11 @@ public class C3 {
         passwordButton.click();
         Thread.sleep(2000);
         System.out.println(errorPopUp.getText());
-        fdriver.close();
+        if (errorPopUp.getText().equals("Password changed successfully")) {
+            System.out.println("Test successful");
+        } else {
+            System.out.println("Test failed");
+        }
+        fdriver.quit();
     }
 }
