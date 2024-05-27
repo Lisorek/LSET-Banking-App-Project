@@ -9,7 +9,6 @@ public class SI9 {
     public static void main(String[] args) throws InterruptedException {
         FirefoxDriver fdriver = new FirefoxDriver();
 
-        try {
             String url = "http://lsetbank.lset.uk/";
 
             fdriver.get(url);
@@ -51,8 +50,6 @@ public class SI9 {
             } else {
                 System.out.println("Test Successful: Copy-paste is disabled in the password field.");
             }
-        } finally {
             fdriver.quit();
         }
     }
-}

@@ -9,7 +9,6 @@ public class SI7 {
         FirefoxDriver fdriver1 = new FirefoxDriver();
         FirefoxDriver fdriver2 = new FirefoxDriver();
 
-        try {
             String url = "http://lsetbank.lset.uk/";
 
             fdriver1.get(url);
@@ -51,10 +50,7 @@ public class SI7 {
             } else {
                 System.out.println("Test Successful: Simultaneous logins are not allowed.");
             }
-        } finally {
-
             fdriver1.quit();
             fdriver2.quit();
         }
     }
-}
