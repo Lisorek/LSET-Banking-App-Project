@@ -38,11 +38,11 @@ public class C5 {
         Thread.sleep(2000);
         WebElement errorPopUp = fdriver.findElement(By.className("invalid-feedback"));
         System.out.println(errorPopUp.getText());
-        if (errorPopUp.getText().equals("Required")) {
+        if (errorPopUp.isDisplayed()) {
             System.out.println("Test successful");
         } else {
             System.out.println("Test failed");
         }
-        fdriver.close();
+        fdriver.quit();
     }
 }

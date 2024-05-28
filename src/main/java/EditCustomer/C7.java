@@ -51,7 +51,7 @@ public class C7 {
         newPassword.sendKeys("Password123!");
         passwordButton.click();
         Thread.sleep(2000);
-        System.out.println(errorPopUp.getText());
+        System.out.println("Pop up displayed: " + errorPopUp.getText());
         if (errorPopUp.getText().equals("Password changed successfully")) {
             System.out.println("Test successful");
         } else {
