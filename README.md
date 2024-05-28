@@ -24,7 +24,7 @@ Once all the stories were ready and in the backlog, we created our first sprint 
 
 You can find them here: [Test Documents](https://drive.google.com/drive/folders/1VPrYV-K0rIFvv37PQZCjflE1e2OcZtGI?usp=sharing)
 
-Once all the documents were ready (including test cases), we started testing the web app manually. This process took a lot of time because we encountered some issues (for example, the website didn't work for over a week because the DevOps team couldn't deploy the front end, so we had to wait, similar to a real company). However, we finally managed to finish and started writing automated tests in Selenium. 
+Once all the documents were ready (including test cases), we started testing the web app manually. This process took a lot of time because we encountered some issues (for example, the website didn't work for over a week because the DevOps team couldn't deploy the front end, so we had to wait, similar to a real company). However, we finally managed to finish and started writing automated tests in Selenium. Overall we found around 53 bugs by doing manual tests.
 
 Just because I wanted to demonstrate my capabilities, I wrote all the tests on my own for this portfolio and my knowledge, but in reality, the contribution was split equally among the team.
 
