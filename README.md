@@ -6,7 +6,7 @@ If you're on this page, you probably want to find out more about my contribution
 
 Firstly, our school, the **London School Of Emerging Technologies (LSET)**, prepared an online banking app for us (testers). There were 3 testers, including myself. This app needed a lot of testing.
 
-We worked using **Agile Scrum**. So, we started by planning and adding user stories onto Jira (We worked on [atlassian.net](https://www.atlassian.net)).
+We worked using **Agile Scrum**. So, we started by planning and adding user stories onto Jira (we worked on [atlassian.net](https://www.atlassian.net)).
 
 In our team, we had:
 - 3 Testers - responsible for testing the entire app.
@@ -24,7 +24,9 @@ Once all the stories were ready and in the backlog, we created our first sprint 
 
 You can find them here: [Test Documents](https://drive.google.com/drive/folders/1VPrYV-K0rIFvv37PQZCjflE1e2OcZtGI?usp=sharing)
 
-Once all the documents were ready (including test cases), we started testing the web app manually. This process took a lot of time because we encountered some issues (for example, the website didn't work for over a week because the DevOps team couldn't deploy the front end, so we had to wait, similar to a real company). However, we finally managed to finish and started writing automated tests in Selenium. Overall we found around 53 bugs by doing manual tests.
+Disclaimer: If you see strange emails in test cases, these were accounts created on 10-minute email websites (just so we didn't have to provide our real ones).
+
+Once all the documents were ready (including test cases), we started testing the web app manually. This process took a lot of time because we encountered some issues (for example, the website didn't work for over a week because the DevOps team couldn't deploy the front end, so we had to wait, similar to a real company). However, we finally managed to finish and started writing automated tests in Selenium. Overall, we found around 53 bugs by doing manual tests.
 
 Just because I wanted to demonstrate my capabilities, I wrote all the tests on my own for this portfolio and my knowledge, but in reality, the contribution was split equally among the team.
 
