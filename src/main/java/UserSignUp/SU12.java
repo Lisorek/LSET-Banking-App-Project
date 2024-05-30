@@ -5,7 +5,7 @@ import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.firefox.FirefoxDriver;
 
-public class SU10 {
+public class SU12 {
     public static void main(String[] args) throws InterruptedException {
         FirefoxDriver fdriver = new FirefoxDriver();
         fdriver.get("http://lsetbank.lset.uk/");
@@ -16,20 +16,20 @@ public class SU10 {
         Thread.sleep(1500);
 
         WebElement usernameField = fdriver.findElement(By.id("username"));
-        WebElement passwordField = fdriver.findElement(By.id("password"));
+        //WebElement passwordField = fdriver.findElement(By.id("password"));
         WebElement confirmPasswordField = fdriver.findElement(By.id("confirmPassword"));
         WebElement emailField = fdriver.findElement(By.id("email"));
         WebElement signUpButton2 = fdriver.findElement(By.xpath("/html/body/div/main/div/form/div[5]/button"));
 
-        usernameField.sendKeys("warwick_jane@mail.com");
-        passwordField.sendKeys("24.9Nx%z3");
-        confirmPasswordField.sendKeys("24.9Nx%z3");
-        emailField.sendKeys("jane_warwick@gmail.com");
+        usernameField.sendKeys("olga.project@mail.com");
+        //passwordField.sendKeys("Mp@57,N2");
+        confirmPasswordField.sendKeys("Mp@57,N2");
+        emailField.sendKeys("olga.project@mail.com");
         signUpButton2.click();
         Thread.sleep(1000);
 
         try {
-            WebElement errorPopUp = fdriver.findElement(By.className("Toastify"));
+            WebElement errorPopUp = fdriver.findElement(By.xpath("/html/body/div/main/div/form/div[2]/div"));
             System.out.println("After providing all that data, Error displayed says: " + errorPopUp.getText());
             System.out.println("Test Successful");
         } catch (NoSuchElementException e) {
