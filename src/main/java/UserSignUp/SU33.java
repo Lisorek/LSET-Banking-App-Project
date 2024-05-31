@@ -8,7 +8,7 @@ import org.openqa.selenium.firefox.FirefoxDriver;
 public class SU33 {
     public static void main(String[] args) throws InterruptedException {
         FirefoxDriver fdriver = new FirefoxDriver();
-        fdriver.get("http://lsetbank2.lset.uk/");
+        fdriver.get("http://lsetbank.lset.uk/");
         fdriver.manage().window().maximize();
 
 

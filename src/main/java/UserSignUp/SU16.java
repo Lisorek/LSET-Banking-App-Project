@@ -8,7 +8,7 @@ import org.openqa.selenium.firefox.FirefoxDriver;
 public class SU16 {
     public static void main(String[] args) throws InterruptedException {
         FirefoxDriver fdriver = new FirefoxDriver();
-        fdriver.get("http://lsetbank2.lset.uk/");
+        fdriver.get("http://lsetbank.lset.uk/");
         fdriver.manage().window().maximize();
 
         WebElement signUpBttn = fdriver.findElement(By.xpath("/html/body/div/nav/div/div/button[2]"));

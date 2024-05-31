@@ -10,15 +10,15 @@ public class SU22 {
         ChromeDriver chdriver = new ChromeDriver();
         EdgeDriver edriver = new EdgeDriver();
         try {
-            fdriver.get("http://lsetbank2.lset.uk/");
+            fdriver.get("http://lsetbank.lset.uk/");
             fdriver.manage().window().maximize();
             System.out.println("Firefox - The page loaded with this title: " + fdriver.getTitle());
 
-            chdriver.get("http://lsetbank2.lset.uk/");
+            chdriver.get("http://lsetbank.lset.uk/");
             chdriver.manage().window().maximize();
             System.out.println("Chrome - The page loaded with this title: " + chdriver.getTitle());
 
-            edriver.get("http://lsetbank2.lset.uk/");
+            edriver.get("http://lsetbank.lset.uk/");
             edriver.manage().window().maximize();
             System.out.println("Edge - The page loaded with this title: " + edriver.getTitle());
         }
