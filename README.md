@@ -1,13 +1,13 @@
 # LSET Online Banking App (Project)
 
-Summary:
-[Test Documents](https://drive.google.com/drive/folders/1VPrYV-K0rIFvv37PQZCjflE1e2OcZtGI?usp=sharing)
-[Selenium Tests](https://github.com/Lisorek/LSET-Banking-App-Project/tree/main/src/main/java)
-[Postman API Tests](https://github.com/Lisorek/LSET-Banking-App-Project-API-Tests)
+Quick Access:     
+[TEST_DOCUMENTS](https://drive.google.com/drive/folders/1VPrYV-K0rIFvv37PQZCjflE1e2OcZtGI?usp=sharing)  
+[SELENIUM_TESTS](https://github.com/Lisorek/LSET-Banking-App-Project/tree/main/src/main/java)  
+[POSTMAN_API_TESTS](https://github.com/Lisorek/LSET-Banking-App-Project-API-Tests)  
 
-Hello Stranger!
+# Hello Stranger!
 
-If you're on this page, you probably want to find out more about my contributions as a Tester and how the whole process looked. I will explain everything in a few short lines here:
+If you're on this page, you probably want to find out more about my contributions in this project as a Tester and how the whole process looked. I will explain everything in a few short lines here:
 
 Firstly, our school, the **London School Of Emerging Technologies (LSET)**, prepared an online banking app for us (testers). There were 3 testers, including myself. This app needed a lot of testing.
 
