@@ -1,5 +1,10 @@
 # LSET Online Banking App (Project)
 
+Summary:
+[Test Documents](https://drive.google.com/drive/folders/1VPrYV-K0rIFvv37PQZCjflE1e2OcZtGI?usp=sharing)
+[Selenium Tests](https://github.com/Lisorek/LSET-Banking-App-Project/tree/main/src/main/java)
+[Postman API Tests](https://github.com/Lisorek/LSET-Banking-App-Project-API-Tests)
+
 Hello Stranger!
 
 If you're on this page, you probably want to find out more about my contributions as a Tester and how the whole process looked. I will explain everything in a few short lines here:
@@ -34,4 +39,4 @@ You can find my Selenium tests here: [My Tests](https://github.com/Lisorek/LSET-
 
 Then while still waiting for my team to finish their part in selenium testing, I thought I will start writing Test cases for API tests, you can still find them here: [Test Cases API](https://docs.google.com/spreadsheets/d/1S8K-cnSpvLZutXFtXi6KGaPK8EknD1e_wborZwLQheA/edit#gid=0)
 
-Also while I was writing test cases, I thought I will also do some of the testing too, you can find my postman tests here: [POSTMAN Tests](https://github.com/Lisorek/LSET-Banking-App-Project-API-Tests)
+Also while I was writing test cases, I thought I will also do some of the testing too, you can find my postman tests here: [Postman Tests](https://github.com/Lisorek/LSET-Banking-App-Project-API-Tests)
