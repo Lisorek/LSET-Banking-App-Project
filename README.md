@@ -33,3 +33,5 @@ Just because I wanted to demonstrate my capabilities, I wrote all the tests on m
 You can find my Selenium tests here: [My Tests](https://github.com/Lisorek/LSET-Banking-App-Project/tree/main/src/main/java)  (To run them in your inteliJ, you'll need latest Selenium libraries added to the project)
 
 Then while still waiting for my team to finish their part in selenium testing, I thought I will start writing Test cases for API tests, you can still find them here: [Test Cases API](https://docs.google.com/spreadsheets/d/1S8K-cnSpvLZutXFtXi6KGaPK8EknD1e_wborZwLQheA/edit#gid=0)
+
+Also while I was writing test cases, I thought I will also do some of the testing too, you can find my postman tests here: [POSTMAN Tests](https://github.com/Lisorek/LSET-Banking-App-Project-API-Tests)
