@@ -36,10 +36,10 @@ Once all the documents were ready (including test cases), we started testing the
 
 Just because I wanted to demonstrate my capabilities, I wrote all the tests on my own for this portfolio and my knowledge, but in reality, the contribution was split equally among the team.
 
-You can find my Selenium tests here: [My Tests](https://github.com/Lisorek/LSET-Banking-App-Project/tree/main/src/main/java)  (To run them in your inteliJ, you'll need latest Selenium libraries added to the project)
+You can find my Selenium tests here: [Selenium Tests](https://github.com/Lisorek/LSET-Banking-App-Project/tree/main/src/main/java)  (To run them in your inteliJ, you'll need latest Selenium libraries added to the project)
 
 Then while still waiting for my team to finish their part in selenium testing, I thought I will start writing Test cases for API tests, you can still find them here: [Test Cases API](https://docs.google.com/spreadsheets/d/1S8K-cnSpvLZutXFtXi6KGaPK8EknD1e_wborZwLQheA/edit#gid=0)
 
-Also while I was writing test cases, I thought I will also do some of the testing too, you can find my postman tests here: [Postman Tests](https://github.com/Lisorek/LSET-Banking-App-Project-API-Tests)
+Also while I was writing test cases, I thought I will also do some of the testing too, you can find my postman tests here: [API Tests](https://github.com/Lisorek/LSET-Banking-App-Project-API-Tests)
 
 After I finished my API tests I decided to start writing a Final Report here: [Final Report](https://docs.google.com/document/d/1CI-qsaYn6wfnc66LnxvA4Z73Lkh1ebZ-/edit) to close the project. 
