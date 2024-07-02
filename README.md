@@ -4,6 +4,7 @@ Quick Access:
 [TEST_DOCUMENTS](https://drive.google.com/drive/folders/1VPrYV-K0rIFvv37PQZCjflE1e2OcZtGI?usp=sharing)  
 [SELENIUM_TESTS](https://github.com/Lisorek/LSET-Banking-App-Project/tree/main/src/main/java)  
 [POSTMAN_API_TESTS](https://github.com/Lisorek/LSET-Banking-App-Project-API-Tests)  
+[SUMMARY REPORT](https://docs.google.com/document/d/1CI-qsaYn6wfnc66LnxvA4Z73Lkh1ebZ-/edit)
 
 # Hello Stranger!
 
@@ -41,4 +42,4 @@ Then while still waiting for my team to finish their part in selenium testing, I
 
 Also while I was writing test cases, I thought I will also do some of the testing too, you can find my postman tests here: [Postman Tests](https://github.com/Lisorek/LSET-Banking-App-Project-API-Tests)
 
-After I finished my API tests I decided to start writing a Final Report here: [Final Report](https://docs.google.com/document/d/1SlQpZq414b7TDqNktnG0uCr9-j0BffjyITiMTY0aavI/) to close the project. 
+After I finished my API tests I decided to start writing a Final Report here: [Final Report](https://docs.google.com/document/d/1CI-qsaYn6wfnc66LnxvA4Z73Lkh1ebZ-/edit) to close the project. 
