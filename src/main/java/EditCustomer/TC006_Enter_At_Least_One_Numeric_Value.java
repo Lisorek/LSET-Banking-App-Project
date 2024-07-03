@@ -5,7 +5,7 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.firefox.FirefoxDriver;
 
 
-public class C7 {
+public class TC006_Enter_At_Least_One_Numeric_Value {
     public static void main(String[] args) throws InterruptedException {
         FirefoxDriver fdriver = new FirefoxDriver();
         fdriver.get("http://lsetbank.lset.uk/");
@@ -34,7 +34,7 @@ public class C7 {
         WebElement newPassword = fdriver.findElement(By.id("newPassword"));
         WebElement passwordButton = fdriver.findElement(By.xpath("/html/body/div/main/div/div/form/div[4]/button"));
         oldPassword.sendKeys("Password123!");
-        newPassword.sendKeys("Tomato!!!");
+        newPassword.sendKeys("123123123");
         passwordButton.click();
         Thread.sleep(2000);
         WebElement errorPopUp = fdriver.findElement(By.className("Toastify"));
@@ -47,11 +47,11 @@ public class C7 {
         //This code is to change password back to the old one straight after changing it
         oldPassword.clear();
         newPassword.clear();
-        oldPassword.sendKeys("Tomato!!!");
+        oldPassword.sendKeys("123123123");
         newPassword.sendKeys("Password123!");
         passwordButton.click();
         Thread.sleep(2000);
-        System.out.println("Pop up displayed: " + errorPopUp.getText());
+        System.out.println(errorPopUp.getText());
         if (errorPopUp.getText().equals("Password changed successfully")) {
             System.out.println("Test successful");
         } else {
