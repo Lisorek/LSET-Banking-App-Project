@@ -1,11 +1,11 @@
 package ProductsTab;
 
 import org.openqa.selenium.By;
-import org.openqa.selenium.NoSuchElementException;
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.firefox.FirefoxDriver;
 
-public class PT11 {
+public class TC007_Rating_Empty {
     public static void main(String[] args) throws InterruptedException {
         FirefoxDriver fdriver = new FirefoxDriver();
         fdriver.get("http://lsetbank.lset.uk/");
@@ -33,27 +33,25 @@ public class PT11 {
         WebElement rating = fdriver.findElement(By.id("rating"));
         WebElement review = fdriver.findElement(By.id("content"));
         rating.clear();
-        rating.sendKeys("5");
-        review.sendKeys("Great product!");
+        rating.sendKeys("");
+        review.sendKeys("Wonderful Product!");
         Thread.sleep(2500);
-        WebElement submit = fdriver.findElement(By.xpath("/html/body/div/main/div/div[2]/div/form/button"));
-        submit.click();
-        Thread.sleep(1000);
 
         try {
-            WebElement errorPopUp = fdriver.findElement(By.className("Toastify"));
-            if (errorPopUp.getText().equals("")) {
-                System.out.println("There's no error displayed");
-                System.out.println("Test Failed");
-            } else {
-                System.out.println("After providing valid data, Error displayed under it says: " + errorPopUp.getText());
-                System.out.println("Test Successful");
-            }
-        } catch (NoSuchElementException e) {
-            System.out.println("No error pop-up appeared.");
-            System.out.println("Test Failed");
+        JavascriptExecutor js = (JavascriptExecutor) fdriver;
+        String validationMessage = (String) js.executeScript("return arguments[0].validationMessage;", rating);
+        System.out.println("Validation message: " + validationMessage);
+
+        if (validationMessage != null && !validationMessage.isEmpty()) {
+            System.out.println("Test successful - error appeared");
+        } else {
+            System.out.println("Test failed - no error");
+        }
+        } catch (Exception e) {
+            System.out.println("An unexpected error occurred: " + e.getMessage());
         } finally {
             fdriver.quit();
         }
     }
 }
+

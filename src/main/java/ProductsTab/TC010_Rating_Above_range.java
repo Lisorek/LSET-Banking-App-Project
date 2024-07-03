@@ -5,7 +5,7 @@ import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.firefox.FirefoxDriver;
 
-public class PT7 {
+public class TC010_Rating_Above_range {
     public static void main(String[] args) throws InterruptedException {
         FirefoxDriver fdriver = new FirefoxDriver();
         fdriver.get("http://lsetbank.lset.uk/");
@@ -33,9 +33,10 @@ public class PT7 {
         WebElement rating = fdriver.findElement(By.id("rating"));
         WebElement review = fdriver.findElement(By.id("content"));
         rating.clear();
-        rating.sendKeys("");
-        review.sendKeys("Wonderful Product!");
+        rating.sendKeys("128900");
+        review.sendKeys("Excelent product!");
         Thread.sleep(2500);
+
 
         try {
         JavascriptExecutor js = (JavascriptExecutor) fdriver;
