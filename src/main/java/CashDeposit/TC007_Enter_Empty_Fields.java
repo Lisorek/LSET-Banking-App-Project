@@ -5,7 +5,7 @@ import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.firefox.FirefoxDriver;
 
-public class CD8 {
+public class TC007_Enter_Empty_Fields {
     public static void main(String[] args) throws InterruptedException {
         FirefoxDriver fdriver = new FirefoxDriver();
         fdriver.get("http://lsetbank.lset.uk/");
@@ -27,34 +27,20 @@ public class CD8 {
 
         WebElement cashDeposit = fdriver.findElement(By.xpath("/html/body/div/nav/div/div/button[3]"));
         cashDeposit.click();
-
-        WebElement accountNumber = fdriver.findElement(By.id("productName"));
-        WebElement sortCode = fdriver.findElement(By.id("productDescription"));
-        WebElement amount = fdriver.findElement(By.id("productPrice"));
-        accountNumber.sendKeys("764956070");
-        sortCode.sendKeys("6780");
-        amount.sendKeys("230");
-        Thread.sleep(1500);
-
         WebElement depositButton = fdriver.findElement(By.xpath("/html/body/div/main/div/div/form/button"));
         depositButton.click();
-        Thread.sleep(4000);
-
-        // Check for the error popup
-        WebElement errorPopUp = null;
         try {
-            errorPopUp = fdriver.findElement(By.className("Toastify"));
+            WebElement errorPopUp = fdriver.findElement(By.className("invalid-feedback"));
+            if (errorPopUp.isDisplayed()) {
+                System.out.println("After providing no data, Error displayed says: " + errorPopUp.getText());
+                System.out.println("Test Successful");
+            }
         } catch (NoSuchElementException e) {
-            // Do nothing, errorPopUp will remain null
-        }
-
-        if (errorPopUp != null && errorPopUp.isDisplayed()) {
-            System.out.println("Error displayed: " + errorPopUp.getText());
-            System.out.println("Test Successful");
-        } else {
-            System.out.println("No error pop-up appeared");
+            System.out.println("No error pop-up appeared. All the fields were empty");
             System.out.println("Test Failed");
+        } finally {
+            fdriver.quit();
         }
-        fdriver.quit();
     }
 }
+

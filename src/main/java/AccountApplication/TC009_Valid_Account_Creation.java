@@ -5,7 +5,7 @@ import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.firefox.FirefoxDriver;
 
-public class AA1 {
+public class TC009_Valid_Account_Creation {
     public static void main(String[] args) throws InterruptedException {
         FirefoxDriver fdriver = new FirefoxDriver();
         fdriver.get("http://lsetbank.lset.uk/");
@@ -37,21 +37,19 @@ public class AA1 {
         WebElement monthlyExpenses = fdriver.findElement(By.id("productDescription"));
         WebElement ninoNumber = fdriver.findElement(By.id("productPrice"));
         WebElement submitButton = fdriver.findElement(By.xpath("/html/body/div/main/div/div/form/button"));
-        annualIncome.sendKeys("abcd");
-        monthlyExpenses.sendKeys("1000");
-        ninoNumber.sendKeys("N12345678");
+        annualIncome.sendKeys("20000");
+        monthlyExpenses.sendKeys("1300");
+        ninoNumber.sendKeys("NA123456G");
         submitButton.click();
+        Thread.sleep(2500);
 
-        Thread.sleep(1500);
         try {
-            WebElement errorPopUp = fdriver.findElement(By.xpath("html/body/div/main/div/div/form/div[1]/div"));
-            if (errorPopUp.isDisplayed()) {
-                System.out.println("After providing all that data, Error displayed says: " + errorPopUp.getText());
-                System.out.println("Test Successful");
-            }
-        } catch (NoSuchElementException e) {
-            System.out.println("No error pop-up appeared.");
+            WebElement errorPopUp = fdriver.findElement(By.xpath("html/body/div/main/div/div/form/div[3]/div"));
+            System.out.println("After providing all that data, Error displayed says: " + errorPopUp.getText());
             System.out.println("Test Failed");
+        } catch (NoSuchElementException e) {
+            System.out.println("No error pop-up appeared. Valid account creation.");
+            System.out.println("Test Successful");
         } finally {
             fdriver.quit();
         }

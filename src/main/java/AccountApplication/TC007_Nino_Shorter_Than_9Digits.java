@@ -5,7 +5,7 @@ import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.firefox.FirefoxDriver;
 
-public class AA4 {
+public class TC007_Nino_Shorter_Than_9Digits {
     public static void main(String[] args) throws InterruptedException {
         FirefoxDriver fdriver = new FirefoxDriver();
         fdriver.get("http://lsetbank.lset.uk/");
@@ -38,18 +38,19 @@ public class AA4 {
         WebElement ninoNumber = fdriver.findElement(By.id("productPrice"));
         WebElement submitButton = fdriver.findElement(By.xpath("/html/body/div/main/div/div/form/button"));
         annualIncome.sendKeys("20000");
-        monthlyExpenses.sendKeys("!!!!!!!@#");
-        ninoNumber.sendKeys("N12345678");
+        monthlyExpenses.sendKeys("1000");
+        ninoNumber.sendKeys("NE123");
         submitButton.click();
+        Thread.sleep(2500);
 
         try {
-            WebElement errorPopUp = fdriver.findElement(By.xpath("html/body/div/main/div/div/form/div[2]/div"));
+            WebElement errorPopUp = fdriver.findElement(By.xpath("html/body/div/main/div/div/form/div[3]/div"));
             if (errorPopUp.isDisplayed()) {
                 System.out.println("After providing all that data, Error displayed says: " + errorPopUp.getText());
                 System.out.println("Test Successful");
             }
         } catch (NoSuchElementException e) {
-            System.out.println("No error pop-up appeared.");
+            System.out.println("No error pop-up appeared. Nino shouldn't be shorter than 9 digits");
             System.out.println("Test Failed");
         } finally {
             fdriver.quit();

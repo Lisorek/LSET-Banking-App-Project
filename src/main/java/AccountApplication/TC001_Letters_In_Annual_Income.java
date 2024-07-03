@@ -5,7 +5,7 @@ import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.firefox.FirefoxDriver;
 
-public class AA3 {
+public class TC001_Letters_In_Annual_Income {
     public static void main(String[] args) throws InterruptedException {
         FirefoxDriver fdriver = new FirefoxDriver();
         fdriver.get("http://lsetbank.lset.uk/");
@@ -37,12 +37,12 @@ public class AA3 {
         WebElement monthlyExpenses = fdriver.findElement(By.id("productDescription"));
         WebElement ninoNumber = fdriver.findElement(By.id("productPrice"));
         WebElement submitButton = fdriver.findElement(By.xpath("/html/body/div/main/div/div/form/button"));
-        annualIncome.sendKeys("!!!!!!!@#");
+        annualIncome.sendKeys("abcd");
         monthlyExpenses.sendKeys("1000");
         ninoNumber.sendKeys("N12345678");
         submitButton.click();
-        Thread.sleep(2500);
 
+        Thread.sleep(1500);
         try {
             WebElement errorPopUp = fdriver.findElement(By.xpath("html/body/div/main/div/div/form/div[1]/div"));
             if (errorPopUp.isDisplayed()) {

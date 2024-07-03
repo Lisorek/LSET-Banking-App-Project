@@ -5,7 +5,7 @@ import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.firefox.FirefoxDriver;
 
-public class AA2 {
+public class TC002_Letters_in_monthlyField {
     public static void main(String[] args) throws InterruptedException {
         FirefoxDriver fdriver = new FirefoxDriver();
         fdriver.get("http://lsetbank.lset.uk/");

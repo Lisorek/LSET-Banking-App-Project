@@ -5,7 +5,7 @@ import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.firefox.FirefoxDriver;
 
-public class AA9 {
+public class TC004_SpecialCharacters_In_MonthlyExpenses {
     public static void main(String[] args) throws InterruptedException {
         FirefoxDriver fdriver = new FirefoxDriver();
         fdriver.get("http://lsetbank.lset.uk/");
@@ -38,18 +38,19 @@ public class AA9 {
         WebElement ninoNumber = fdriver.findElement(By.id("productPrice"));
         WebElement submitButton = fdriver.findElement(By.xpath("/html/body/div/main/div/div/form/button"));
         annualIncome.sendKeys("20000");
-        monthlyExpenses.sendKeys("1300");
-        ninoNumber.sendKeys("NA123456G");
+        monthlyExpenses.sendKeys("!!!!!!!@#");
+        ninoNumber.sendKeys("N12345678");
         submitButton.click();
-        Thread.sleep(2500);
 
         try {
-            WebElement errorPopUp = fdriver.findElement(By.xpath("html/body/div/main/div/div/form/div[3]/div"));
-            System.out.println("After providing all that data, Error displayed says: " + errorPopUp.getText());
-            System.out.println("Test Failed");
+            WebElement errorPopUp = fdriver.findElement(By.xpath("html/body/div/main/div/div/form/div[2]/div"));
+            if (errorPopUp.isDisplayed()) {
+                System.out.println("After providing all that data, Error displayed says: " + errorPopUp.getText());
+                System.out.println("Test Successful");
+            }
         } catch (NoSuchElementException e) {
-            System.out.println("No error pop-up appeared. Valid account creation.");
-            System.out.println("Test Successful");
+            System.out.println("No error pop-up appeared.");
+            System.out.println("Test Failed");
         } finally {
             fdriver.quit();
         }

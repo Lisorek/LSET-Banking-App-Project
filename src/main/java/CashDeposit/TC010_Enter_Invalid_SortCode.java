@@ -4,7 +4,7 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.firefox.FirefoxDriver;
 
-public class CD14 {
+public class TC010_Enter_Invalid_SortCode {
     public static void main(String[] args) throws InterruptedException {
         FirefoxDriver fdriver = new FirefoxDriver();
         fdriver.get("http://lsetbank.lset.uk/");
@@ -37,8 +37,8 @@ public class CD14 {
         WebElement sortCode = fdriver.findElement(By.id("productDescription"));
         WebElement amount = fdriver.findElement(By.id("productPrice"));
         accountNumber.sendKeys("20912429"); // Valid Account Number
-        sortCode.sendKeys("373675");       // Valid Sort Code
-        amount.sendKeys("-600");            // Valid Amount
+        sortCode.sendKeys("12341234");       // invalid Sort Code
+        amount.sendKeys("600");            // Valid Amount
         Thread.sleep(1500);
 
         WebElement depositButton = fdriver.findElement(By.xpath("/html/body/div/main/div/div/form/button"));
@@ -54,7 +54,7 @@ public class CD14 {
                 System.out.println("Balance of the account is the same now as it was on the beginning of this code");
                 System.out.println("Test Successful");
             } else {
-                System.out.println("Cash deposit worked with negative amount provided, money have been taken away");
+                System.out.println("Cash deposit worked with wrong sort-code, balance differs from what it was on the beginning");
                 System.out.println("Test Failed");
             }
         } finally {

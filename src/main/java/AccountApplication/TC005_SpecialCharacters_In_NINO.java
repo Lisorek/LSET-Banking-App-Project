@@ -5,7 +5,7 @@ import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.firefox.FirefoxDriver;
 
-public class AA8 {
+public class TC005_SpecialCharacters_In_NINO {
     public static void main(String[] args) throws InterruptedException {
         FirefoxDriver fdriver = new FirefoxDriver();
         fdriver.get("http://lsetbank.lset.uk/");
@@ -39,7 +39,7 @@ public class AA8 {
         WebElement submitButton = fdriver.findElement(By.xpath("/html/body/div/main/div/div/form/button"));
         annualIncome.sendKeys("20000");
         monthlyExpenses.sendKeys("1000");
-        ninoNumber.sendKeys("£$%^&!");
+        ninoNumber.sendKeys("!!!!!!!@#");
         submitButton.click();
         Thread.sleep(2500);
 
@@ -50,7 +50,7 @@ public class AA8 {
                 System.out.println("Test Successful");
             }
         } catch (NoSuchElementException e) {
-            System.out.println("No error pop-up appeared. Nino shouldn't contain special characters");
+            System.out.println("No error pop-up appeared.");
             System.out.println("Test Failed");
         } finally {
             fdriver.quit();
